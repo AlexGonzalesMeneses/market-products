@@ -1,0 +1,22 @@
+{
+  "users": [
+    { "id": 1, "name": "Alex", "age": 23, "roleId": 1 },
+    { "id": 2, "name": "Alexander", "age": 18, "roleId": 2 },
+    { "id": 3, "name": "Alejandro", "age": 24, "roleId": 1 },
+    { "id": 4, "name": "Alvaro", "age": 22, "roleId": 3 },
+    { "id": 5, "name": "Andres", "age": 20, "roleId": 1 },
+    { "id": 6, "name": "Adrian", "age": 19, "roleId": 2 },
+    { "id": 7, "name": "Ariel", "age": 16, "roleId": 2 },
+    { "id": 8, "name": "Ademar", "age": 33, "roleId": 1 },
+    { "id": 9, "name": "Aurora", "age": 13, "roleId": 1 },
+    { "id": 10, "name": "Axel", "age": 25, "roleId": 1 },
+    { "id": 11, "name": "Alberto", "age": 24, "roleId": 3 },
+    { "id": 12, "name": "Antonio", "age": 22, "roleId": 1 },
+    { "id": 13, "name": "Arminda", "age": 23, "roleId": 2 }
+  ],
+  "roles": [
+    { "id": 1, "role": "standard" },
+    { "id": 2, "role": "manager" },
+    { "id": 2, "role": "system" }
+  ]
+}
