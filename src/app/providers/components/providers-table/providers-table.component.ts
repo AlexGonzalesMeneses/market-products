@@ -4,13 +4,7 @@ import { Provider } from '../../interfaces/provider.interface';
 @Component({
   selector: 'app-providers-table',
   templateUrl: './providers-table.component.html',
-  styles: [
-    `
-      tr {
-        cursor: pointer;
-      }
-    `,
-  ],
+  styles: [],
 })
 export class ProvidersTableComponent implements OnInit {
   @Input() providers: Provider[] = [];

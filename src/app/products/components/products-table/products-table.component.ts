@@ -4,13 +4,7 @@ import { Product } from '../../interfaces/product.interface';
 @Component({
   selector: 'app-products-table',
   templateUrl: './products-table.component.html',
-  styles: [
-    `
-      tr {
-        cursor: pointer;
-      }
-    `,
-  ],
+  styles: [],
 })
 export class ProductsTableComponent {
   @Input() products: Product[] = [];
