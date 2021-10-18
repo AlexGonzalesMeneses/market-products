@@ -1,0 +1,14 @@
+<div class="policy-container">
+    <h1 style="text-align:center">Expiration Products</h1>
+    <div class="policy-table">
+        <div class="headings">
+            <span class="heading">Product</span>
+            <span class="heading">Expire</span>
+        </div>
+
+        <div class="policy" *ngFor="let product of ListaProducts" >
+            <span>{{product.name}}</span>
+            <span>{{product.vencimiento}}</span>
+        </div>
+    </div>
+</div>

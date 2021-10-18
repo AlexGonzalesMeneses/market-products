@@ -28,15 +28,28 @@
     "products": [
         {
             "id": 1,
-            "name": "COCA COLA"
+            "name": "COCA COLA",
+            "vencimiento": "2021-10-15"
         },
         {
             "id": 2,
-            "name": "FANTA"
+            "name": "FANTA",
+            "vencimiento": "2021-10-20"
         },
         {
             "id": 3,
-            "name": "SPRITE"
+            "name": "SPRITE",
+            "vencimiento": "2021-10-22"
+        },
+        {
+            "id": 4,
+            "name": "BURN",
+            "vencimiento": "2021-10-24"
+        },
+        {
+            "id": 5,
+            "name": "RED-BULL",
+            "vencimiento": "2021-10-30"
         }
     ],
     "users": [

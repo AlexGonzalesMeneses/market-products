@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ActivePromotionsComponent } from './active-promotions/active-promotions.component';
 import { PastPromotionsComponent } from './past-promotions/past-promotions.component';
+import { ProductsToExpireComponent } from './products-to-expire/products-to-expire.component';
 
 
 
@@ -12,7 +13,8 @@ import { PastPromotionsComponent } from './past-promotions/past-promotions.compo
   declarations: [
     RegisterPromotionsComponent,
     ActivePromotionsComponent,
-    PastPromotionsComponent
+    PastPromotionsComponent,
+    ProductsToExpireComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { PastPromotionsComponent } from './past-promotions/past-promotions.compo
   exports:[
     RegisterPromotionsComponent,
     ActivePromotionsComponent,
-    PastPromotionsComponent
+    PastPromotionsComponent,
+    ProductsToExpireComponent
   ]
 })
 export class PromotionModule { }
