@@ -1,0 +1,21 @@
+<div fxLayout="column">
+  <div fxLayout="row" fxLayoutAlign=" center" style="margin-top: 16px; margin-left: 8px;">
+    <h2>Promotions</h2>
+    <span fxFlex></span>
+    <button mat-raised-button color="accent" style="margin-right: 16px;" >
+      <mat-icon>add</mat-icon>
+      Create Promotion
+    </button>
+  </div>
+  <mat-tab-group mat-stretch-tabs>
+    <mat-tab label="Active Promotions"> 
+      <app-active-promotions></app-active-promotions>
+    </mat-tab>
+    <mat-tab label="Past Promotions"> 
+      <app-past-promotions></app-past-promotions>
+    </mat-tab>
+    <mat-tab label="Expired Products"> 
+      <app-products-to-expire></app-products-to-expire>
+    </mat-tab>
+  </mat-tab-group>
+</div>

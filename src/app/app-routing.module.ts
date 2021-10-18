@@ -20,6 +20,16 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: "promotions",
+    component: AdminLayoutComponent,
+    children: [
+      {
+        path: "",
+        loadChildren: () => import('./promotion/promotion.module').then((m) => m.PromotionModule),
+      }
+    ]
+  },
   // ,
   // {
   //   path: "products",
@@ -34,8 +44,7 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'user/not-found'
   }
-
-];
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
