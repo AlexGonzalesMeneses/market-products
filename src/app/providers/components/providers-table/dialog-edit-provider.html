@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>Edit Provider</h1>
+<div mat-dialog-content>
+  <p>Edit ...</p>
+  <mat-form-field appearance="fill" style="width: 100%;">
+    <mat-label>First Name</mat-label>
+        <input matInput type="text" [(ngModel)]="provider.name" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="width: 100%;">
+    <mat-label>Last Name</mat-label>
+    <input matInput type="text" [(ngModel)]="provider.lastname" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="width: 100%;">
+    <mat-label>Telephone</mat-label>
+    <input matInput type="text" [(ngModel)]="provider.phone" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" style="width: 100%;">
+    <mat-label>Email</mat-label>
+    <input matInput type="text" [(ngModel)]="provider.email" required />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions fxLayout="row" style="margin-bottom: 2px;">
+  <button mat-raised-button color="primary" (click)="cancel()">
+    <mat-icon>cancel</mat-icon>
+    Cancel
+  </button>
+  <span fxFlex></span>
+  <button mat-raised-button color="primary" (click)="edit()">
+    <mat-icon>edit</mat-icon>
+    Edit
+  </button>
+</div>

@@ -8,11 +8,9 @@
     {{ item.name }}
   </button>
   <span fxFlex></span>
-  <button mat-mini-fab color="accent" class="mx-16 btn-nav" >
-    <img src="assets/programmer.png" alt="" class="icon-mini" />
-  </button>
-  <button mat-raised-button class="mx-16 btn-nav" >
+  <button mat-raised-button class="mx-16 btn-nav" (click)="onClick()">
     <img src="assets/programmer.png" alt="" class="icon" />
-    Name User
+    <span *ngIf="isAuthenticated()">Profile</span>
+    <span *ngIf="!isAuthenticated()">Login</span>
   </button>
 </mat-toolbar>

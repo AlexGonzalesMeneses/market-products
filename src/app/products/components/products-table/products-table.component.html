@@ -1,29 +1,29 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Nombre</th>
-      <th>Vencimiento</th>
-      <th>Acciones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr
-      *ngFor="let product of products; index as i"
-      [routerLink]="['/products', product.id]"
-    >
-      <td>{{ i + 1 }}</td>
-      <td>{{ product.name }}</td>
-      <td>{{ product.vencimiento | date }}</td>
-      <td>
-        <button
-          mat-button
-          color="info"
-          [routerLink]="['/products/edit', product.id]"
-        >
-          Editar
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<mat-card *ngFor="let product of products" class="card">
+  <div fxLayout="row" fxLayoutAlign=" center" class="card" style="margin-top: 10px;">
+    <button mat-icon-button color="accent" aria-label="Example icon button with a heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <span class="title-card" style="width: 20%;">
+          {{product.name}}
+    </span>
+    <span class="title-card" style="width: 20%;">
+      {{product.vencimiento | date}}
+    </span>
+    <span fxFlex></span>
+    <button mat-icon-button color="primary" 
+            (click)="openDialogEdit(product.id)"
+            aria-label="Example icon button with a vertical three dot icon">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" 
+            (click)="deleteProduct(product)"
+            aria-label="Example icon button with a vertical three dot icon">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" 
+            (click)="openIn(product)"
+            aria-label="Example icon button with a vertical three dot icon">
+      <mat-icon>open_in_new</mat-icon>
+    </button>
+  </div>
+</mat-card>

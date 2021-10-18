@@ -9,7 +9,7 @@ import { ProductsToExpireComponent } from './products-to-expire/products-to-expi
 import { PromotionRoutingModule } from './promotion.routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { PromotionComponent } from './promotion.component';
+import { DialogNewPromotion, PromotionComponent } from './promotion.component';
 
 
 
@@ -19,7 +19,8 @@ import { PromotionComponent } from './promotion.component';
     ActivePromotionsComponent,
     PastPromotionsComponent,
     ProductsToExpireComponent,
-    PromotionComponent
+    PromotionComponent,
+    DialogNewPromotion
   ],
   imports: [
     CommonModule,
@@ -27,6 +28,7 @@ import { PromotionComponent } from './promotion.component';
     PromotionRoutingModule,
     FlexLayoutModule,
     SharedModule,
+    FormsModule,
   ],
   exports:[
     SharedModule,

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Product } from 'src/app/products/interfaces/product.interface';
 import { environment } from 'src/environments/environment';
 import { Provider } from '../interfaces/provider.interface';
 
@@ -31,5 +32,9 @@ export class ProviderService {
 
   deleteProvider(id: number): Observable<any> {
     return this.http.delete<any>(`${this.baseUrl}/providers/${id}`);
+  }
+
+  getProductsByProviderId(providerId: string) {
+    return this.http.get<Product[]>(`${this.baseUrl}/products?providerId=${providerId}`);
   }
 }

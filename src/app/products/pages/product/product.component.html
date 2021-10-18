@@ -1,10 +1,10 @@
-<mat-grid-list cols="1" *ngIf="!product; else divHeroe">
+<mat-grid-list cols="1" *ngIf="!product; else divProduct">
   <mat-grid-tile>
     <mat-spinner></mat-spinner>
   </mat-grid-tile>
 </mat-grid-list>
 
-<ng-template #divHeroe>
+<ng-template #divProduct>
   <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px" class="container">
     <div fxFlex="30">
       <h1>{{ product.name }}</h1>

@@ -29,6 +29,10 @@ export class ProductService {
     );
   }
 
+  getProductsByProviderId(providerId: string) {
+    return this.http.get<Product[]>(`${this.baseUrl}/products?providerId=${providerId}`);
+  }
+
   deleteProduct(id: number): Observable<any> {
     return this.http.delete<any>(`${this.baseUrl}/products/${id}`);
   }

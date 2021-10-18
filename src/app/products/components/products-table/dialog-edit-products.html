@@ -1,0 +1,45 @@
+<h1 mat-dialog-title>Edit Product</h1>
+<div mat-dialog-content>
+  <p>Edit ...</p>
+  <mat-form-field  appearance="fill" style="width: 100%;" >
+    <mat-label>Name</mat-label>
+    <input matInput type="text" [(ngModel)]="product.name" required />
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill" style="width: 100%;">
+    <mat-label>Select Date</mat-label>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      [(ngModel)]="product.vencimiento"
+    />
+    <mat-datepicker-toggle
+      matSuffix
+      [for]="picker"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill" style="width: 100%;">
+    <mat-label>Provider</mat-label>
+    <mat-select [(ngModel)]="product.providerId" required>
+      <mat-option
+        *ngFor="let provider of providers"
+        [value]="provider.id"
+      >
+        {{ provider.name }} {{ provider.lastname }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions fxLayout="row" style="margin-bottom: 2px;">
+  <button mat-raised-button color="primary" (click)="cancel()">
+    <mat-icon>cancel</mat-icon>
+    Cancel
+  </button>
+  <span fxFlex></span>
+  <button mat-raised-button color="primary" (click)="edit()">
+    <mat-icon>edit</mat-icon>
+    Edit
+  </button>
+</div>

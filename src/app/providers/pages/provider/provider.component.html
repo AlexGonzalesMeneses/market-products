@@ -1,10 +1,10 @@
-<mat-grid-list cols="1" *ngIf="!provider; else divHeroe">
+<mat-grid-list cols="1" *ngIf="!provider; else divProvider">
   <mat-grid-tile>
     <mat-spinner></mat-spinner>
   </mat-grid-tile>
 </mat-grid-list>
 
-<ng-template #divHeroe>
+<ng-template #divProvider>
   <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px" class="container">
     <div fxFlex="30">
       <h1>{{ provider.name }} {{ provider.lastname }}</h1>
@@ -21,7 +21,13 @@
         <mat-list-item
           ><b>Telefono: &nbsp;</b> {{ provider.phone }}
         </mat-list-item>
-        <mat-list-item><b>Email: &nbsp;</b> {{ provider.email }} </mat-list-item>
+        <mat-list-item
+          ><b>Email: &nbsp;</b> {{ provider.email }}
+        </mat-list-item>
+        <mat-list-item>
+          <b>Productos: &nbsp; </b>
+          <b *ngFor="let product of products">{{ product.name }} &nbsp;</b>
+        </mat-list-item>
       </mat-list>
 
       <br />

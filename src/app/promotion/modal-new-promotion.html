@@ -1,0 +1,66 @@
+
+<h1 mat-dialog-title>Create Promotion</h1>
+<div mat-dialog-content>
+  <p>Create ...</p>
+
+  <mat-form-field  appearance="fill" style="width: 100%;" >
+    <mat-label>Name Promotion</mat-label>
+    <input matInput type="text" [(ngModel)]="promotion.title" required />
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill" style="width: 100%;">
+    <mat-label>Select a product</mat-label>
+    <mat-select [(ngModel)]="promotion.idItem" required>
+      <mat-option
+        *ngFor="let dataProduct of ListaProducts"
+        [value]="dataProduct.id"
+      >
+        {{ dataProduct.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill" style="width: 100%;" >
+    <mat-label>Discount</mat-label>
+    <input matInput type="text" [(ngModel)]="promotion.cantidad" required />
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill" style="width: 100%;">
+    <mat-label>Init Date</mat-label>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      [(ngModel)]="promotion.dateIni"
+    />
+    <mat-datepicker-toggle
+      matSuffix
+      [for]="picker"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill" style="width: 100%;">
+    <mat-label>End Date</mat-label>
+    <input
+      matInput
+      [matDatepicker]="pickerA"
+      [(ngModel)]="promotion.dateEnd"
+    />
+    <mat-datepicker-toggle
+      matSuffix
+      [for]="pickerA"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #pickerA></mat-datepicker>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions fxLayout="row" style="margin-bottom: 2px;">
+  <button mat-raised-button color="primary" (click)="cancel()">
+    <mat-icon>cancel</mat-icon>
+    Cancel
+  </button>
+  <span fxFlex></span>
+  <button mat-raised-button color="primary" (click)="create()">
+    <mat-icon>save</mat-icon>
+    Create
+  </button>
+</div>

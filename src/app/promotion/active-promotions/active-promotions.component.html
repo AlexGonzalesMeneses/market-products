@@ -1,5 +1,4 @@
 <div class="policy-container">
-    <h1 style="text-align:center">Promotion Actives</h1>
     <div class="policy-table">
         <div class="headings">
             <span class="heading">Promocion</span>
@@ -10,8 +9,8 @@
 
         <div class="policy" *ngFor="let promotion of ListaPromotions" >
             <span>{{promotion.namePromotion}}</span>
-            <span>{{promotion.iniDate}}</span>
-            <span>{{promotion.endDate}}</span>
+            <span>{{promotion.iniDate | date}}</span>
+            <span>{{promotion.endDate | date}} </span>
             <span>{{promotion.discountRate}}%</span>
         </div>
     </div>

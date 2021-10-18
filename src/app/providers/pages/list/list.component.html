@@ -1,14 +1,14 @@
-<h1>Listado de Proveedores</h1>
-<mat-divider></mat-divider>
-<br />
-
-<div
-  fxLayout="row wrap"
-  fxLayout.xs="column"
-  fxLayoutAlign="center"
-  fxLayoutGap="20px"
->
-  <div fxFlex="20" fxFlex.lg="15" fxFlex.sm="30">
-    <app-providers-table [providers]="providers"></app-providers-table>
+<div fxLayout="column">
+  <div fxLayout="row" fxLayoutAlign=" center" style="margin-top: 16px;">
+    <h2>Provider List</h2>
+    <span fxFlex></span>
+    <button mat-raised-button color="accent"  
+            (click)="openDialogCreate()">
+      <mat-icon>add</mat-icon>
+      Add Provider
+    </button>
   </div>
+  <mat-divider></mat-divider>
+  <app-providers-table [providers]="providers" (emiter)="loadProviders()"></app-providers-table>
 </div>
+
