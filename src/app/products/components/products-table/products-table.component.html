@@ -1,0 +1,29 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Vencimiento</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let product of products; index as i"
+      [routerLink]="['/products', product.id]"
+    >
+      <td>{{ i + 1 }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.vencimiento | date }}</td>
+      <td>
+        <button
+          mat-button
+          color="info"
+          [routerLink]="['/products/edit', product.id]"
+        >
+          Editar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

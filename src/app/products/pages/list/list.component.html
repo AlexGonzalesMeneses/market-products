@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Listado de Productos</h1>
+  <mat-divider></mat-divider>
+  <br />
+
+  <div
+    fxLayout="row wrap"
+    fxLayout.xs="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="20px"
+  >
+    <div fxFlex="20" fxFlex.lg="15" fxFlex.sm="30">
+      <app-products-table [products]="products"></app-products-table>
+    </div>
+  </div>
+</div>
