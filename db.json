@@ -41,13 +41,13 @@
       "id": 1,
       "name": "COCA COLA123",
       "vencimiento": "2021-10-22T04:00:00.000Z",
-      "providerId": 3
+      "providerId": 1
     },
     {
       "id": 2,
       "name": "FANTA",
       "vencimiento": "2021-10-18",
-      "providerId": 2
+      "providerId": 1
     },
     {
       "id": 3,
