@@ -1,10 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../../interfaces/product.interface';
 
 @Component({
   selector: 'app-products-table',
   templateUrl: './products-table.component.html',
-  styles: [],
+  styles: [
+    `
+      tr {
+        cursor: pointer;
+      }
+    `,
+  ],
 })
 export class ProductsTableComponent {
   @Input() products: Product[] = [];

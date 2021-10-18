@@ -1,1 +1,63 @@
-<p>create works!</p>
+<div class="container">
+  <h1>
+    {{ product.id ? "Editar" : "Nuevo" }}
+    Producto
+    <small>{{ product.name }}</small>
+  </h1>
+
+  <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column">
+    <div fxFlex="50" fxLayout="column">
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
+        <mat-form-field fxFlex="100" fxLayout.xs="column">
+          <mat-label>Nombre</mat-label>
+          <input matInput type="text" [(ngModel)]="product.name" required />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Seleccione una fecha</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            [(ngModel)]="product.vencimiento"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Proveedor</mat-label>
+          <mat-select [(ngModel)]="product.providerId" required>
+            <mat-option
+              *ngFor="let provider of providers"
+              [value]="provider.id"
+            >
+              {{ provider.name }} {{ provider.lastname }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <br />
+
+        <div fxLayout>
+          <button mat-raised-button color="primary" (click)="save()">
+            <mat-icon>edit</mat-icon>
+            {{ product.id ? "Actualizar" : "Crear" }}
+          </button>
+          <span class="spacer"></span>
+          <button
+            *ngIf="product.id"
+            mat-raised-button
+            (click)="deleteProduct()"
+            color="warn"
+          >
+            <mat-icon>remove</mat-icon>
+            Borrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

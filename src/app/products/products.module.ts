@@ -7,6 +7,7 @@ import { ProductComponent } from './pages/product/product.component';
 import { CreateComponent } from './pages/create/create.component';
 import { MaterialModule } from '../material/material.module';
 import { ProductsTableComponent } from './components/products-table/products-table.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProductsTableComponent } from './components/products-table/products-tab
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class ProductsModule { }
