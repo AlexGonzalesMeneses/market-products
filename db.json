@@ -1,88 +1,104 @@
 {
-    "purchase-order": [
-        {
-            "id": 1,
-            "orderNumber": "1111",
-            "stateOrder": "PEN",
-            "receivedType": "RP",
-            "paymentStatus": "NO_PAYMENT",
-            "totalAmount": 100,
-            "productId": 1
-        },
-        {
-            "id": 2,
-            "orderNumber": "2222",
-            "stateOrder": "PEN",
-            "receivedType": "RP",
-            "paymentStatus": "NO_PAYMENT",
-            "totalAmount": 100,
-            "productId": 2
-        },
-        {
-            "id": 2,
-            "orderNumber": "2222",
-            "stateOrder": "FIN",
-            "receivedType": "RP",
-            "paymentStatus": "NO_PAYMENT",
-            "totalAmount": 100,
-            "productId": 3
-        }
-    ],
-    "providers": [
-        {
-            "id": 1,
-            "name": "Diego Marcelo",
-            "lastname": "Choque Ramirez",
-            "phone": 65757881,
-            "email": "diego@gmail.com"
-        },
-        {
-            "id": 2,
-            "name": "Juan",
-            "lastname": "Canedo",
-            "phone": 12431241,
-            "email": "juan@gmail.com"
-        },
-        {
-            "id": 3,
-            "name": "Julio",
-            "lastname": "Andrade",
-            "phone": 74567653,
-            "email": "julio@gmail.com"
-        },
-        {
-            "id": 4,
-            "name": "Adrian",
-            "lastname": "Lopez",
-            "phone": 8769765,
-            "email": "adrian@gmail.com"
-        },
-        {
-            "id": 5,
-            "name": "Silver Surfer",
-            "lastname": "Diego",
-            "phone": "3425",
-            "email": "Blockchain "
-        }
-    ],
-    "products": [
-        {
-            "id": 1,
-            "name": "COCA COLA123",
-            "vencimiento": "2021-10-22T04:00:00.000Z",
-            "providerId": 3
-        },
-        {
-            "id": 2,
-            "name": "FANTA",
-            "vencimiento": "2021-10-18",
-            "providerId": 2
-        },
-        {
-            "id": 3,
-            "name": "SPRITE",
-            "vencimiento": "2021-10-16",
-            "providerId": 1
-        }
-    ]
+  "purchase-order": [
+    {
+      "id": 1,
+      "orderNumber": "1111",
+      "stateOrder": "FIN",
+      "receivedType": "RP",
+      "paymentStatus": "NO_PAYMENT",
+      "totalAmount": 100,
+      "productId": 1
+    },
+    {
+      "id": 2,
+      "orderNumber": "2222",
+      "stateOrder": "PEN",
+      "receivedType": "RP",
+      "paymentStatus": "NO_PAYMENT",
+      "totalAmount": 100,
+      "productId": 2
+    },
+    {
+      "id": 2,
+      "orderNumber": "2222",
+      "stateOrder": "FIN",
+      "receivedType": "RP",
+      "paymentStatus": "NO_PAYMENT",
+      "totalAmount": 100,
+      "productId": 3
+    },
+    {
+      "stateOrder": "FIN",
+      "receivedType": "0",
+      "paymentStatu": "0",
+      "totalAmount": "",
+      "providerID": 3,
+      "id": 3
+    },
+    {
+      "stateOrder": "PEN",
+      "receivedType": "RP",
+      "paymentStatu": "NO_PAYMENT",
+      "totalAmount": "100",
+      "providerID": 3,
+      "id": 4
+    }
+  ],
+  "providers": [
+    {
+      "id": 1,
+      "name": "Diego Marcelo",
+      "lastname": "Choque Ramirez",
+      "phone": 65757881,
+      "email": "diego@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Juan",
+      "lastname": "Canedo",
+      "phone": 12431241,
+      "email": "juan@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Julio",
+      "lastname": "Andrade",
+      "phone": 74567653,
+      "email": "julio@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Adrian",
+      "lastname": "Lopez",
+      "phone": 8769765,
+      "email": "adrian@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "Silver Surfer",
+      "lastname": "Diego",
+      "phone": "3425",
+      "email": "Blockchain "
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "COCA COLA123",
+      "vencimiento": "2021-10-22T04:00:00.000Z",
+      "providerId": 3
+    },
+    {
+      "id": 2,
+      "name": "FANTA",
+      "vencimiento": "2021-10-18",
+      "providerId": 2
+    },
+    {
+      "id": 3,
+      "name": "SPRITE",
+      "vencimiento": "2021-10-16",
+      "providerId": 1
+    }
+  ]
 }

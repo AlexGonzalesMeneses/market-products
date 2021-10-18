@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductService } from 'src/app/products/services/product.service';
 import { IPurchaseOrder } from '../../interfaces/purchase-order.interface';
 import { PurchaseOrderService } from '../../services/purchase-order.service';
 
@@ -12,7 +13,8 @@ export class PurchaseOrderListUnfinishedComponent implements OnInit {
 
   public listaOrdenes:IPurchaseOrder[] = [];
   constructor(private purchaseOrderService:PurchaseOrderService,
-    private router:Router) { }
+    private router:Router,
+    private productService:ProductService) { }
 
   ngOnInit(): void {
     this.cargarDatos();
@@ -29,7 +31,18 @@ export class PurchaseOrderListUnfinishedComponent implements OnInit {
     //this.router.navigate(['/purchase-order/edit/',{id:idEdit}]);
   }
 
-  finalizar():void{
-    
+  finalizar(id:number | undefined):void{
+    let valor = {stateOrder:'FIN'}
+    this.purchaseOrderService.finalizarPurcharse(id!,valor).subscribe((resp)=>{
+      this.router.navigate(['/purchase-order/list-completed']);
+    });
+  }
+
+  getProducto(id:number):string{
+    let nombre='';
+    this.productService.getProductsById(id).subscribe((resp)=>{
+      nombre = resp.name;
+    });
+    return nombre;
   }
 }

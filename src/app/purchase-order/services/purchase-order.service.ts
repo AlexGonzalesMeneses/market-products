@@ -27,7 +27,11 @@ export class PurchaseOrderService {
       })
     );
   }
-  createOrder(order:any):Observable<any>{
-    return this.http.post(`${this.baseURL}/purchase-order`,order);
+  createOrder(order:IPurchaseOrder):Observable<IPurchaseOrder>{
+    return this.http.post<IPurchaseOrder>(`${this.baseURL}/purchase-order`,order);
+  }
+
+  finalizarPurcharse(id:number,valor:{}):Observable<IPurchaseOrder>{
+    return this.http.patch<IPurchaseOrder>(`${this.baseURL}/purchase-order/${id}`,valor);
   }
 }

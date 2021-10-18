@@ -5,6 +5,7 @@ import { PurchaseOrderListUnfinishedComponent } from './components/purchase-orde
 import { PurchaseOrderCreateComponent } from './components/purchase-order-create/purchase-order-create.component';
 import { PurchaseOrderEditComponent } from './components/purchase-order-edit/purchase-order-edit.component';
 import { PurchaseOrderRoutingModule } from './purchase-order-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PurchaseOrderRoutingModule } from './purchase-order-routing.module';
   ],
   imports: [
     CommonModule,
-    PurchaseOrderRoutingModule
+    PurchaseOrderRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class PurchaseOrderModule { }

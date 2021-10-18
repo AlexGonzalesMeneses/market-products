@@ -1,5 +1,4 @@
 <div class="container">
-    <div class="card-group">
         <!-- <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -33,23 +32,28 @@
             </button>
         </div> -->
 
-        <form action="">
+        <form action="" [formGroup]="formGroup">
+            <label for="">El producto a ordenar es: {{producto.name}}</label>
+            <input type="text" hidden="true" formControlName="providerID" value="producto.providerId">{{producto.providerId}}
             <div class="input-group mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="" class="form-label input-group-text">Mounto Total</label>
+                <input type="" class="form-control" id="" aria-describedby="" formControlName="totalAmount">
             </div>
-            <select class="input-group form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
+            <select class="input-group form-select" aria-label="Default select example" formControlName="stateOrder">
+                <option selected value="0">Estado de la orden</option>
+                <option *ngFor="let stateOrder of statesOrder" [value]="stateOrder">{{stateOrder}}</option>
             </select>
-            <select class="input-group form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
+            <select class="input-group form-select" aria-label="Default select example" formControlName="receivedType">
+                <option selected value="0">Tipo de Recepcion</option>
+                <option *ngFor="let receivedType of receivedTypes" [value]="receivedType">{{receivedType}}</option>
             </select>
-            <select class="input-group form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
+            <select class="input-group form-select" aria-label="Default select example" formControlName="paymentStatu">
+                <option selected value="0">Estado de pago</option>
+                <option *ngFor="let paymentStatu of paymentStatus" [value]="paymentStatu">{{paymentStatu}}</option>
             </select>
+            <label for="">El proveedor es: {{provider.name}}</label>
         </form>
-    </div>
+        <button class="btn btn-primary" (click)="createOrder()">
+            Crear
+        </button>
 </div>
