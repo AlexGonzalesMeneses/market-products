@@ -12,9 +12,14 @@ const routes: Routes = [
       import('./providers/providers.module').then((m) => m.ProvidersModule),
   },
   {
+    path: 'products',
+    loadChildren: () =>
+      import('./products/products.module').then((m) => m.ProductsModule),
+  },
+  {
     path: '**',
-    redirectTo: 'auth'
-  }
+    redirectTo: 'auth',
+  },
 ];
 
 @NgModule({

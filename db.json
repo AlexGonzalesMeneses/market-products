@@ -27,25 +27,32 @@
       "lastname": "Lopez",
       "phone": 8769765,
       "email": "adrian@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "Silver Surfer",
+      "lastname": "Diego",
+      "phone": "3425",
+      "email": "Blockchain "
     }
   ],
   "products": [
     {
       "id": 1,
-      "title": "Coca Cola",
-      "SKU": "123423213",
+      "name": "COCA COLA",
+      "vencimiento": "2021-10-15",
       "providerId": 1
     },
     {
       "id": 2,
-      "title": "Pepsi",
-      "SKU": "125132643",
-      "providerId": 1
+      "name": "FANTA",
+      "vencimiento": "2021-10-18",
+      "providerId": 2
     },
     {
       "id": 3,
-      "title": "Sprite",
-      "SKU": "6568456765",
+      "name": "SPRITE",
+      "vencimiento": "2021-10-16",
       "providerId": 1
     }
   ]
