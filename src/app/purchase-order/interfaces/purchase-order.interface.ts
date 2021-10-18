@@ -1,9 +1,10 @@
 export interface IPurchaseOrder{
     id?:number;
     orderNumber:string;
+    dateBuy:Date;
     stateOrder:string;
     receivedType:string;
     paymentStatus:string;
     totalAmount:number;
-    provider:string;
+    productId:number;
 }

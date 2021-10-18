@@ -7,10 +7,10 @@ import { PurchaseOrderListUnfinishedComponent } from './components/purchase-orde
 
 const routes:Routes = [
   { path: '', children: [
-    {path: 'create', component: PurchaseOrderCreateComponent},
+    {path: 'create/:id', component: PurchaseOrderCreateComponent},
     {path: 'list-completed', component: PurchaseOrderListCompletedComponent},
     {path: 'list-unfinished', component: PurchaseOrderListUnfinishedComponent},
-    {path: 'edit/:{id}', component: PurchaseOrderEditComponent},
+    {path: 'edit/:id', component: PurchaseOrderEditComponent},
     {path: '**', redirectTo: ''}
   ]}
 ]

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PurchaseOrderService } from '../../services/purchase-order.service';
 
 @Component({
@@ -9,16 +9,22 @@ import { PurchaseOrderService } from '../../services/purchase-order.service';
 })
 export class PurchaseOrderCreateComponent implements OnInit {
 
+  productId!:number;
   constructor(private purchaseOrderService:PurchaseOrderService,
-    private route:Router) { }
+    private router:Router,
+    private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      console.log(params);
+      this.productId = params['id'];
+    })
   }
 
   createOrder():void{
     let orden;
     this.purchaseOrderService.createOrder(orden).subscribe((resp) => {
-      this.route.navigate(['/purchase-order/list-unfinished']);
+      this.router.navigate(['/purchase-order/list-unfinished']);
     })
   }
 }
