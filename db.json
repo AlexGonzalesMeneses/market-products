@@ -1,0 +1,52 @@
+{
+  "providers": [
+    {
+      "id": 1,
+      "name": "Diego Marcelo",
+      "lastname": "Choque Ramirez",
+      "phone": 65757881,
+      "email": "diego@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Juan",
+      "lastname": "Canedo",
+      "phone": 12431241,
+      "email": "juan@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Julio",
+      "lastname": "Andrade",
+      "phone": 74567653,
+      "email": "julio@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Adrian",
+      "lastname": "Lopez",
+      "phone": 8769765,
+      "email": "adrian@gmail.com"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Coca Cola",
+      "SKU": "123423213",
+      "providerId": 1
+    },
+    {
+      "id": 2,
+      "title": "Pepsi",
+      "SKU": "125132643",
+      "providerId": 1
+    },
+    {
+      "id": 3,
+      "title": "Sprite",
+      "SKU": "6568456765",
+      "providerId": 1
+    }
+  ]
+}
