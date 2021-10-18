@@ -125,6 +125,14 @@
       "iniDate": "2021-10-14T04:00:00.000Z",
       "endDate": "2022-01-14T04:00:00.000Z",
       "id": 4
+    },
+    {
+      "namePromotion": "Test Promotion",
+      "idItem": 4,
+      "discountRate": "10",
+      "iniDate": "2021-10-18T04:00:00.000Z",
+      "endDate": "2021-10-25T04:00:00.000Z",
+      "id": 5
     }
   ],
   "products": [
@@ -142,15 +150,15 @@
     },
     {
       "id": 3,
-      "name": "SPRITE",
-      "vencimiento": "2021-10-16",
-      "providerId": 5
+      "name": "SPRITEs",
+      "vencimiento": "2021-10-13T04:00:00.000Z",
+      "providerId": 2
     },
     {
-      "id": 5,
-      "name": "COCA COLA ZERO",
-      "vencimiento": "2021-10-29T04:00:00.000Z",
-      "providerId": 1
+      "id": 4,
+      "name": "REDBULL",
+      "vencimiento": "2021-10-30T04:00:00.000Z",
+      "providerId": 5
     }
   ],
   "providers": [
@@ -188,6 +196,51 @@
       "lastname": "Bazoalto",
       "phone": "69696969",
       "email": "samuel23@gmail.com"
+    }
+  ],
+  "purchase-order": [
+    {
+      "id": 1,
+      "orderNumber": "1111",
+      "stateOrder": "FIN",
+      "receivedType": "RP",
+      "paymentStatus": "NO_PAYMENT",
+      "totalAmount": 100,
+      "productId": 1
+    },
+    {
+      "id": 2,
+      "orderNumber": "2222",
+      "stateOrder": "PEN",
+      "receivedType": "RP",
+      "paymentStatus": "NO_PAYMENT",
+      "totalAmount": 100,
+      "productId": 2
+    },
+    {
+      "id": 2,
+      "orderNumber": "2222",
+      "stateOrder": "FIN",
+      "receivedType": "RP",
+      "paymentStatus": "NO_PAYMENT",
+      "totalAmount": 100,
+      "productId": 3
+    },
+    {
+      "stateOrder": "FIN",
+      "receivedType": "0",
+      "paymentStatu": "0",
+      "totalAmount": "",
+      "providerID": 3,
+      "id": 3
+    },
+    {
+      "stateOrder": "PEN",
+      "receivedType": "RP",
+      "paymentStatu": "NO_PAYMENT",
+      "totalAmount": "100",
+      "providerID": 3,
+      "id": 4
     }
   ]
 }

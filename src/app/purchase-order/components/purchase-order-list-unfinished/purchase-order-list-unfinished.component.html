@@ -1,0 +1,33 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Número de Orden</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Estado de la orden</th>
+                <th scope="col">Estado de pago</th>
+                <th scope="col" colspan="2">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of listaOrdenes">
+                <th scope="row">{{order.id}}</th>
+                <td>{{order.orderNumber}}</td>
+                <td>{{getProducto(order.productId!)}}</td>
+                <td>{{order.stateOrder}}</td>
+                <td>{{order.paymentStatus}}</td>
+                <td>
+                    <a [routerLink]="['/purchase-order/edit/',order.id]" class="btn btn-secondary">
+                        <span class="glyphicon glyphicon-edit">Editar</span>
+                    </a>
+                </td>
+                <td>
+                    <a (click)="finalizar(order.id)" routerLink="/purchase-order/list-unfinished" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-check">Finalizar</span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

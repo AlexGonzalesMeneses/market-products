@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Número de Orden</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Estado de la orden</th>
+                <th scope="col">Estado de pago</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of listaOrdenes">
+                <th scope="row">{{order.id}}</th>
+                <td>{{order.orderNumber}}</td>
+                <td></td>
+                <td>{{order.stateOrder}}</td>
+                <td>{{order.paymentStatus}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

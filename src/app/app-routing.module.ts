@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminLayoutComponent } from './shared/components/layout/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './shared/components/layout/auth-layout/auth-layout.component';
 const routes: Routes = [
+  {path:'purchase-order', loadChildren: () => import('./purchase-order/purchase-order.module').then(m => m.PurchaseOrderModule)},
   {
     path: "", 
     redirectTo: 'products', 
@@ -45,6 +46,16 @@ const routes: Routes = [
       {
         path: "",
         loadChildren: () => import('./products/products.module').then((m) => m.ProductsModule),
+      }
+    ]
+  },
+  {
+    path: "orders",
+    component: AdminLayoutComponent,
+    children: [
+      {
+        path: "",
+        loadChildren: () => import('./purchase-order/purchase-order.module').then((m) => m.PurchaseOrderModule),
       }
     ]
   },
