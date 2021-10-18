@@ -25,7 +25,7 @@ import { RouterModule } from '@angular/router';
     SharedMaterialModule,
     NavbarComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent,
+    AuthLayoutComponent
   ]
 })
 export class SharedModule { }

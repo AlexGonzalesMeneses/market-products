@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   public items = [
-    {name:"Home", activate: true, route:"home"},
+    {name:"Products", activate: true, route:"products"},
     {name:"Providers", activate: true, route:"providers"},
     {name:"Pays", activate: true, route:"pays"},
     {name:"Promotions", activate: true, route:"promotions"},

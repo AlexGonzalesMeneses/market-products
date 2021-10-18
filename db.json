@@ -1,0 +1,87 @@
+{
+  "users": [
+  {
+    "id": 1,
+    "username": "Alex",
+    "password": "123dvdfbb",
+    "roleId": 1
+  },
+  {
+    "id": 2,
+    "username": "Alexander",
+    "password": "123dvdfbb",
+    "roleId": 2
+  },
+  {
+    "id": 3,
+    "username": "Alejandro",
+    "password": "123dvdfbb",
+    "roleId": 1
+  },
+  {
+    "id": 4,
+    "username": "Alvaro",
+    "password": "123dvdfbb",
+    "roleId": 3
+  },
+  {
+    "id": 5,
+    "username": "Andres",
+    "password": "123dvdfbb",
+    "roleId": 1
+  },
+  {
+    "id": 6,
+    "username": "Adrian",
+    "password": "123dvdfbb",
+    "roleId": 2
+  },
+  {
+    "id": 7,
+    "username": "Ariel",
+    "password": "123dvdfbb",
+    "roleId": 2
+  },
+  {
+    "id": 8,
+    "username": "Ademar",
+    "password": "123dvdfbb",
+    "roleId": 1
+  },
+  {
+    "id": 9,
+    "username": "Aurora",
+    "password": "123dvdfbb",
+    "roleId": 1
+  },
+  {
+    "id": 10,
+    "username": "Axel",
+    "password": "123dvdfbb",
+    "roleId": 1
+  },
+  {
+    "id": 11,
+    "username": "Alberto",
+    "password": "123dvdfbb",
+    "roleId": 3
+  },
+  {
+    "id": 12,
+    "username": "Antonio",
+    "password": "123dvdfbb",
+    "roleId": 1
+  },
+  {
+    "id": 13,
+    "username": "Arminda",
+    "password": "123dvdfbb",
+    "roleId": 2
+  }
+],
+  "roles": [
+    { "id": 1, "role": "standard" },
+    { "id": 2, "role": "manager" },
+    { "id": 3, "role": "system" }
+  ]
+}

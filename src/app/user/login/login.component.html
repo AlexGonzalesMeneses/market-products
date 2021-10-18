@@ -1,0 +1,49 @@
+<div
+  fxLayout="row wrap"
+  fxLayoutAlign="center center">
+  <mat-card class="card-container">
+    <mat-card-subtitle style="text-align: center; padding: 10px;">Market Products</mat-card-subtitle>
+    <mat-card-title style="text-align: center; padding: 10px;">Login</mat-card-title>
+    <mat-card-content>
+      <div class="card-image" fxLayout="row wrap" fxLayoutAlign="center center">
+        <img
+          width="200px"
+          src="assets/posting_photo.svg"
+          alt=""
+        />
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="center center">
+
+        <mat-form-field appearance="fill" class="fill-width mx-16">
+          <mat-label>Username</mat-label>
+          <input matInput [formControl]="userName">
+          <mat-error *ngIf="userName.invalid">You must enter a value</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="fill-width mx-16">
+          <mat-label>Password</mat-label>
+          <input matInput [formControl]="password" [type]="hide ? 'password' : 'text'" >
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="password.invalid">You must enter a value</mat-error>
+        </mat-form-field>
+
+        <div style="width: 90%;">
+          <button mat-raised-button (click)="cancel()">Cancel</button>
+          <span fxFlex></span>
+          <button mat-raised-button 
+                  color="accent" 
+                  (click)="login()" 
+                  disabled={{enabledForm()}}>
+            Login
+          </button>
+        </div>
+        
+      </div>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-footer>
+      <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</div>
