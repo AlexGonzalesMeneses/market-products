@@ -1,0 +1,18 @@
+<div class="policy-container">
+    <h1 style="text-align:center">Past Promotion</h1>
+    <div class="policy-table">
+        <div class="headings">
+            <span class="heading">Promocion</span>
+            <span class="heading">Initial Date</span>
+            <span class="heading">End Date</span>
+            <span class="heading">Discount</span>
+        </div>
+
+        <div class="policy" *ngFor="let promotion of ListaPromotions" >
+            <span>{{promotion.namePromotion}}</span>
+            <span>{{promotion.iniDate}}</span>
+            <span>{{promotion.endDate}}</span>
+            <span>{{promotion.discountRate}}%</span>
+        </div>
+    </div>
+</div>

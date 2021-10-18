@@ -4,23 +4,23 @@
             "namePromotion": "halloween ",
             "idItem": "1",
             "discountRate": 10,
-            "iniDate": "2021-10-17",
-            "endDate": "2021-10-18",
+            "iniDate": "2021-08-01",
+            "endDate": "2021-09-01",
             "id": 1
         },
         {
             "namePromotion": "test 2 ",
             "idItem": "2",
             "discountRate": 20,
-            "iniDate": "2021-10-31",
-            "endDate": "2021-11-07",
+            "iniDate": "2021-08-01",
+            "endDate": "2021-09-01",
             "id": 2
         },
         {
             "namePromotion": "Promotion ",
             "idItem": "3",
             "discountRate": 5,
-            "iniDate": "2021-10-31",
+            "iniDate": "2021-10-17",
             "endDate": "2021-11-02",
             "id": 3
         }
@@ -37,6 +37,100 @@
         {
             "id": 3,
             "name": "SPRITE"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "username": "Alex",
+            "password": "123dvdfbb",
+            "roleId": 1
+        },
+        {
+            "id": 2,
+            "username": "Alexander",
+            "password": "123dvdfbb",
+            "roleId": 2
+        },
+        {
+            "id": 3,
+            "username": "Alejandro",
+            "password": "123dvdfbb",
+            "roleId": 1
+        },
+        {
+            "id": 4,
+            "username": "Alvaro",
+            "password": "123dvdfbb",
+            "roleId": 3
+        },
+        {
+            "id": 5,
+            "username": "Andres",
+            "password": "123dvdfbb",
+            "roleId": 1
+        },
+        {
+            "id": 6,
+            "username": "Adrian",
+            "password": "123dvdfbb",
+            "roleId": 2
+        },
+        {
+            "id": 7,
+            "username": "Ariel",
+            "password": "123dvdfbb",
+            "roleId": 2
+        },
+        {
+            "id": 8,
+            "username": "Ademar",
+            "password": "123dvdfbb",
+            "roleId": 1
+        },
+        {
+            "id": 9,
+            "username": "Aurora",
+            "password": "123dvdfbb",
+            "roleId": 1
+        },
+        {
+            "id": 10,
+            "username": "Axel",
+            "password": "123dvdfbb",
+            "roleId": 1
+        },
+        {
+            "id": 11,
+            "username": "Alberto",
+            "password": "123dvdfbb",
+            "roleId": 3
+        },
+        {
+            "id": 12,
+            "username": "Antonio",
+            "password": "123dvdfbb",
+            "roleId": 1
+        },
+        {
+            "id": 13,
+            "username": "Arminda",
+            "password": "123dvdfbb",
+            "roleId": 2
+        }
+    ],
+    "roles": [
+        {
+            "id": 1,
+            "role": "standard"
+        },
+        {
+            "id": 2,
+            "role": "manager"
+        },
+        {
+            "id": 2,
+            "role": "system"
         }
     ]
 }
