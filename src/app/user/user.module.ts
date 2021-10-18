@@ -6,8 +6,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { UserRoutingModule } from './user.routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { SharedModule } from '../shared/shared.module';
 import { Error404Component } from './errors/error.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
