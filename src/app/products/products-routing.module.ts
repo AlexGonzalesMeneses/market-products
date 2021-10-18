@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminLayoutComponent } from '../shared/components/layout/admin-layout/admin-layout.component';
 import { CreateComponent } from './pages/create/create.component';
-import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
-import { ProviderComponent } from './pages/provider/provider.component';
+import { ProductComponent } from './pages/product/product.component';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'list'
+    path: "",
+    redirectTo: "list",
+    pathMatch: "full"
   },
   {
     path: 'list',
@@ -25,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: ':id',
-    component: ProviderComponent,
+    component: ProductComponent
   },
   {
     path: '**',
@@ -37,4 +37,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ProvidersRoutingModule {}
+export class ProductsRoutingModule {}

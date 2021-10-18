@@ -1,0 +1,31 @@
+<mat-grid-list cols="1" *ngIf="!provider; else divHeroe">
+  <mat-grid-tile>
+    <mat-spinner></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divHeroe>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px" class="container">
+    <div fxFlex="30">
+      <h1>{{ provider.name }} {{ provider.lastname }}</h1>
+      <mat-divider></mat-divider>
+      <br />
+    </div>
+
+    <div fxFlex="70">
+      <mat-list>
+        <mat-list-item><b>Nombre:&nbsp;</b> {{ provider.name }} </mat-list-item>
+        <mat-list-item
+          ><b>Apellido: &nbsp;</b> {{ provider.lastname }}
+        </mat-list-item>
+        <mat-list-item
+          ><b>Telefono: &nbsp;</b> {{ provider.phone }}
+        </mat-list-item>
+        <mat-list-item><b>Email: &nbsp;</b> {{ provider.email }} </mat-list-item>
+      </mat-list>
+
+      <br />
+      <button mat-button color="warn" (click)="back()">Regresar</button>
+    </div>
+  </div>
+</ng-template>
