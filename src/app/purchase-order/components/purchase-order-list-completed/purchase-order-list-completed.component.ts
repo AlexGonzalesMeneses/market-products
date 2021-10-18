@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IPurchaseOrder } from '../../interfaces/purchase-order.interface';
+import { PurchaseOrderService } from '../../services/purchase-order.service';
 
 @Component({
   selector: 'app-purchase-order-list-completed',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PurchaseOrderListCompletedComponent implements OnInit {
 
-  constructor() { }
+  public listaOrdenes:IPurchaseOrder[] = [];
+  constructor(private purchaseOrderService:PurchaseOrderService) { }
 
   ngOnInit(): void {
+    this.cargarDatos();
   }
 
+  cargarDatos():void{
+    this.purchaseOrderService.getPurchaseOrderCompleted().subscribe((resp)=>{
+      this.listaOrdenes = resp;
+    })
+  }
 }

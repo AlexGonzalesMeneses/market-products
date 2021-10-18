@@ -7,7 +7,6 @@ import { PurchaseOrderEditComponent } from './components/purchase-order-edit/pur
 import { PurchaseOrderRoutingModule } from './purchase-order-routing.module';
 
 
-
 @NgModule({
   declarations: [
     PurchaseOrderListCompletedComponent,
